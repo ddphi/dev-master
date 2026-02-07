@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form action="/register" method="post">
+        <table align="center" width="600" cellpadding="10" cellspacing="0" style="background-color: #eeeeee; padding: 20px;">
+            
+            <tr>
+                <td colspan="2">
+                    <h2 style="color: blue; margin: 0; border-bottom: 2px solid blue; padding-bottom: 10px;">
+                        Chào mừng bạn đến với tạp chí HTML5 & CSS3
+                    </h2>
+                </td>
+            </tr>
+
+            <tr>
+                <td align="right" width="30%">Tên đăng nhập:</td>
+                <td>
+                    <input type="text" name="username" required autofocus>
+                </td>
+            </tr>
+
+            <tr>
+                <td align="right">Mật khẩu:</td>
+                <td>
+                    <input type="password" name="password" required>
+                </td>
+            </tr>
+
+            <tr>
+                <td align="right">Email:</td>
+                <td>
+                    <input type="email" name="email" required>
+                </td>
+            </tr>
+
+            <tr>
+                <td align="right">Thành phố:</td>
+                <td>
+                    <input type="text" name="city">
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                    Bạn muốn theo dõi bài viết từ chủ đề nào?
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2" align="center">
+                    <table width="80%" border="0">
+                        <tr>
+                            <td>
+                                <input type="checkbox" id="html_basic" name="topic" value="html_basic">
+                                <label for="html_basic">HTML5 cơ bản</label>
+                            </td>
+                            <td>
+                                <input type="checkbox" id="css_basic" name="topic" value="css_basic">
+                                <label for="css_basic">CSS3 cơ bản</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox" id="html_adv" name="topic" value="html_adv">
+                                <label for="html_adv">HTML5 nâng cao</label>
+                            </td>
+                            <td>
+                                <input type="checkbox" id="css_adv" name="topic" value="css_adv">
+                                <label for="css_adv">CSS3 nâng cao</label>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2" align="right" style="padding-top: 20px;">
+                    <button type="reset" style="padding: 8px 20px; color: blue;">Làm lại</button>
+                    <button type="submit" style="padding: 8px 20px; color: blue;">Đăng ký</button>
+                </td>
+            </tr>
+
+        </table>
+    </form>
+
+</body>
+</html>

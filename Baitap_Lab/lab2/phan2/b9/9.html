@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form action="/register" method="post">
+        <table border="0" cellpadding="8" cellspacing="0" width="500">
+            
+            <tr>
+                <td colspan="2">
+                    <h1>Thông tin đăng ký</h1>
+                </td>
+            </tr>
+
+            <tr>
+                <td width="150">Họ và Tên</td>
+                <td>
+                    <input type="text" name="fullname" value="Nguyễn Phượng Hoàng" size="30">
+                </td>
+            </tr>
+
+            <tr>
+                <td>Tên đăng nhập</td>
+                <td>
+                    <input type="text" name="username" value="nphoang" size="30">
+                </td>
+            </tr>
+
+            <tr>
+                <td>Mật khẩu</td>
+                <td>
+                    <input type="password" name="password" value="12345678" size="30">
+                </td>
+            </tr>
+
+            <tr>
+                <td>Giới tính</td>
+                <td>
+                    <input type="radio" id="nam" name="gender" value="nam" checked>
+                    <label for="nam">Nam</label>
+                    
+                    <input type="radio" id="nu" name="gender" value="nu" style="margin-left: 10px;">
+                    <label for="nu">Nu</label>
+                </td>
+            </tr>
+
+            <tr>
+                <td valign="top">Ngôn ngữ lập trình</td>
+                <td>
+                    <input type="checkbox" id="csharp" name="lang" value="csharp" checked>
+                    <label for="csharp">Ngôn ngữ C#</label><br>
+
+                    <input type="checkbox" id="java" name="lang" value="java">
+                    <label for="java">Ngôn ngữ Java</label><br>
+
+                    <input type="checkbox" id="php" name="lang" value="php" checked>
+                    <label for="php">Ngôn ngữ PHP</label><br>
+
+                    <input type="checkbox" id="other" name="lang" value="other">
+                    <label for="other">Ngôn ngữ khác</label>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Tỉnh thành</td>
+                <td>
+                    <select name="city" style="width: 150px;">
+                        <option value="hn">Hà Nội</option>
+                        <option value="hcm">TP. Hồ Chí Minh</option>
+                        <option value="dn">Đà Nẵng</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td>
+                    <button type="submit">Đăng ký</button>
+                    <button type="reset">Reset</button>
+                </td>
+            </tr>
+
+        </table>
+    </form>
+
+</body>
+</html>

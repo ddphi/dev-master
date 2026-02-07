@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form action="/submit-tour" method="post">
+        
+        <table border="1" cellpadding="10" cellspacing="0" width="600" bgcolor="#FFFACD" style="border-collapse: collapse; font-family: Arial, sans-serif;">
+            
+            <tr bgcolor="#FFF8DC">
+                <td colspan="2" align="center">
+                    <h2 style="color: blue; margin: 0;">Đăng ký du lịch</h2>
+                </td>
+            </tr>
+
+            <tr>
+                <td width="150" style="color: blue; font-weight: bold;">Họ và tên</td>
+                <td>
+                    <input type="text" name="hoten" value="Pham Ngoc Cam Dao" size="40">
+                </td>
+            </tr>
+
+            <tr>
+                <td style="color: blue; font-weight: bold;">Địa chỉ</td>
+                <td>
+                    <input type="text" name="diachi" value="227 Nguyễn Văn Cừ" size="40">
+                </td>
+            </tr>
+
+            <tr>
+                <td style="color: blue; font-weight: bold;">Điện thoại</td>
+                <td>
+                    <input type="text" name="dienthoai" value="8351056">
+                </td>
+            </tr>
+
+            <tr>
+                <td style="color: blue; font-weight: bold;">Khách Việt Nam</td>
+                <td>
+                    <input type="checkbox" name="khach_vn" checked>
+                </td>
+            </tr>
+
+            <tr>
+                <td style="color: blue; font-weight: bold;">Chọn tour</td>
+                <td>
+                    <select name="tour">
+                        <optgroup label="Miền Bắc">
+                            <option value="hl_sapa">Hà Nội - Hạ Long - Sapa</option>
+                            <option value="hn_chua_huong">Hà Nội - Chùa Hương - Ninh Bình</option>
+                            <option value="cat_ba">Hà Nội - Cát Bà - Tuần Châu</option>
+                        </optgroup>
+                        <optgroup label="Miền Trung">
+                            <option value="hue">Huế - Bạch Mã - Đà Nẵng</option>
+                            <option value="nha_trang">Nha Trang - Đà Lạt</option>
+                            <option value="buon_me" selected>Buôn mê thuột - Gia lai - Kontum</option>
+                        </optgroup>
+                        <optgroup label="Miền Nam">
+                            <option value="can_tho">TP.HCM - Cần Thơ - Cà Mau</option>
+                            <option value="my_tho">TP.HCM - Mỹ Tho</option>
+                        </optgroup>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td style="color: blue; font-weight: bold;">Phương tiện</td>
+                <td>
+                    <input type="radio" id="maybay" name="phuongtien" value="maybay">
+                    <label for="maybay">Máy bay</label>
+                    
+                    <input type="radio" id="oto" name="phuongtien" value="oto" checked>
+                    <label for="oto">Xe ô tô</label>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                    <fieldset style="background-color: #FFFACD;">
+                        <legend align="center" style="font-weight: bold;">Số lượng đoàn khách</legend>
+                        <div style="text-align: center;">
+                            <label for="nguoilon"><b>Người lớn</b></label>
+                            <input type="number" id="nguoilon" name="nguoilon" value="6" style="width: 50px; margin-right: 20px;">
+                            
+                            <label for="treem"><b>Trẻ em</b></label>
+                            <input type="number" id="treem" name="treem" value="4" style="width: 50px;">
+                        </div>
+                    </fieldset>
+                </td>
+            </tr>
+
+            <tr>
+                <td style="color: blue; font-weight: bold;">Ghi chú thêm</td>
+                <td>
+                    <textarea name="ghichu" rows="4" cols="50">Có 2 trẻ em dưới 6 tuổi&#13;&#10;Có 2 người ăn chay</textarea>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2" align="center">
+                    <button type="submit">Đồng ý</button>
+                </td>
+            </tr>
+
+        </table>
+    </form>
+</body>
+</html>
