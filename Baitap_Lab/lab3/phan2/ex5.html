@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab03 - Ex5</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; 
+            background-color: #f9f9f9;
+            font-family: Arial, sans-serif;
+        }
+        .product-card {
+            position: relative; 
+            width: 250px;
+            background-color: #ffffff;
+            border-radius: 8px; 
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+            padding: 15px; 
+        }
+        .sale-badge {
+            position: absolute; 
+            top: 15px;
+            right: 15px;
+            background-color: #ef4444; 
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px; 
+            font-size: 12px;
+            font-weight: bold;
+        }
+        .product-image {
+            width: 100%; 
+            display: block;
+            margin-bottom: 20px; 
+        }
+        .product-name {
+            font-size: 16px;
+            color: #333333;
+            margin-bottom: 8px;
+        }
+        .product-price {
+            font-size: 16px;
+            color: #ef4444; 
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="product-card">
+        <div class="sale-badge">SALE</div>
+        <img class="product-image" src="https://quatangthuonghieu.vn/wp-content/uploads/2022/05/z3385810213331_e73d14795aa5a7471314fd0d61f9a145.jpg" alt="Áo Thun Cổ Trụ">
+        <h3 class="product-name">Áo Thun Cổ Trụ</h3>
+        <p class="product-price">250.000đ</p>
+        
+    </div>
+
+</body>
+</html>

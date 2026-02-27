@@ -1,0 +1,18 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* 1. Màu theo tên*/
+.color-name {
+    color: red;
+}
+
+/* 2. Màu HEX */
+.color-hex {
+    color: #0066cc;
+}
+
+/* 3. Màu RGB */
+.color-rgb {
+    color: rgb(0, 128, 0);
+}

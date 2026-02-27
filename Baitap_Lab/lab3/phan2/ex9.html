@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab03 - Ex9</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 50px;
+        }
+        .navbar {
+            background-color: #3b3b43;
+            display: inline-block;
+            border-radius: 6px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .main-menu {
+            list-style: none;
+            display: flex;
+        }
+        .main-menu > li {
+            position: relative;
+            border-right: 1px solid #2a2a30;
+        }
+        .main-menu > li:last-child {
+            border-right: none;
+        }
+
+        .main-menu > li > a {
+            display: block;
+            padding: 15px 25px;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .main-menu > li:hover > a,
+        .main-menu > li > a.active {
+            background-color: #2a2a30;
+            color: #5cb85c;
+        }
+        .dropdown {
+            list-style: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #2a2a30;
+            min-width: 180px;
+            border-radius: 0 0 6px 6px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            display: none;
+        }
+        .main-menu > li:hover .dropdown {
+            display: block;
+        }
+        .dropdown li {
+            border-bottom: 1px solid #3b3b43;
+        }
+        .dropdown li:last-child {
+            border-bottom: none;
+        }
+        .dropdown li a {
+            display: block;
+            padding: 12px 20px;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .dropdown li a i {
+            color: #5cb85c;
+            margin-right: 10px;
+            width: 20px;
+            text-align: center;
+        }
+        .dropdown li a:hover {
+            background-color: #1f1f24;
+            color: #5cb85c;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <ul class="main-menu">
+            <li><a href="#">Trang chủ</a></li>
+            <li>
+                <a href="#" class="active">Sản phẩm</a>
+                <ul class="dropdown">
+                    <li><a href="#"><i class="fa-solid fa-file-lines"></i> CSS3</a></li>
+                    <li><a href="#"><i class="fa-solid fa-comment"></i> HTML5</a></li>
+                    <li><a href="#"><i class="fa-solid fa-chevron-right"></i> PHP</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Dịch vụ</a></li>
+            <li><a href="#">Giới thiệu</a></li>
+            <li><a href="#">Liên hệ</a></li>
+        </ul>
+    </nav>
+
+</body>
+</html>
