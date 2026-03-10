@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab04-ex6</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+            background-color: #fff;
+            padding: 20px;
+        }
+
+        .widget-news {
+            width: 350px;
+            background-color: #f0f7f2;
+            border-radius: 4px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .widget-header {
+            background-color: #119e49;
+            color: white;
+            padding: 15px 20px;
+            font-size: 18px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .widget-body {
+            padding: 0 20px;
+        }
+
+        .news-item {
+            display: flex;
+            align-items: center;
+            padding: 15px 0;
+            border-bottom: 1px solid #e0e0e0;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .news-item:last-child {
+            border-bottom: none;
+        }
+
+        .news-item img {
+            width: 90px;
+            height: 65px;
+            object-fit: cover;
+            border: 1px solid transparent;
+            background-color: white;
+            padding: 2px;
+            transition: border-color 0.3s ease;
+        }
+
+        .news-title {
+            flex: 1;
+            margin-left: 15px;
+            font-size: 14px;
+            color: #555;
+            line-height: 1.4;
+            transition: color 0.3s ease;
+        }
+
+        .news-item:hover img {
+            border-color: #119e49;
+        }
+
+        .news-item:hover .news-title {
+            color: #119e49;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="widget-news">
+        <div class="widget-header">
+            Tin Tức Mới Nhất
+        </div>
+        <div class="widget-body">
+            
+            <a href="#" class="news-item" title="Chế phẩm hóa học là gì? Và những điều cần lưu ý khi sử dụng">
+                <img src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?q=80&w=200&auto=format&fit=crop" alt="Chế phẩm hóa học">
+                <span class="news-title">Chế phẩm hóa học là gì? Và những điều cần lưu ý khi sử dụng</span>
+            </a>
+
+            <a href="#" class="news-item" title="Hóa học đằng sau pháo hoa cầm tay">
+                <img src="https://images.unsplash.com/photo-1498931299472-f7a63a5a1cfa?q=80&w=200&auto=format&fit=crop" alt="Pháo hoa">
+                <span class="news-title">Hóa học đằng sau pháo hoa cầm tay</span>
+            </a>
+
+            <a href="#" class="news-item" title="Ứng dụng của xút trong công nghiệp - xút chuẩn hàng tốt">
+                <img src="https://images.unsplash.com/photo-1618042164219-62c820f10723?q=80&w=200&auto=format&fit=crop" alt="Xút">
+                <span class="news-title">Ứng dụng của xút trong công nghiệp - xút chuẩn hàng tốt</span>
+            </a>
+
+            <a href="#" class="news-item" title="Những lợi ích và mối nguy hiểm khi sử dụng hóa chất XÚT (NaOH)">
+                <img src="https://images.unsplash.com/photo-1581093588401-fbb62a02f120?q=80&w=200&auto=format&fit=crop" alt="NaOH">
+                <span class="news-title">Những lợi ích và mối nguy hiểm khi sử dụng hóa chất XÚT (NaOH)</span>
+            </a>
+
+            <a href="#" class="news-item" title="Cung Cấp Hóa chất Sodium hydroxide 99% – Xút Vảy Trung Quốc">
+                <img src="https://images.unsplash.com/photo-1576086213369-97a306d36557?q=80&w=200&auto=format&fit=crop" alt="Sodium hydroxide">
+                <span class="news-title">Cung Cấp Hóa chất Sodium hydroxide 99% – Xút Vảy Trung Quốc</span>
+            </a>
+
+        </div>
+    </div>
+
+</body>
+</html>

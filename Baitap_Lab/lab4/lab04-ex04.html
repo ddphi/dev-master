@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab04-ex4</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+            background-color: #fff;
+        }
+
+        .news-wrapper {
+            background-color: #f0f0f0;
+            width: 400px;
+            padding: 30px;
+        }
+
+        .section-heading {
+            font-size: 24px;
+            color: #333;
+            text-transform: uppercase;
+            margin-bottom: 25px;
+            position: relative;
+        }
+
+        .section-heading::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -8px;
+            width: 45px;
+            height: 3px;
+            background-color: #4caf50;
+        }
+
+        .news-card {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .news-image {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            cursor: pointer;
+            margin-bottom: 15px;
+            background-color: #fff;
+        }
+
+        .news-title {
+            font-size: 20px;
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+            line-height: 1.4;
+            margin-bottom: 15px;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .news-title:hover {
+            color: #4caf50;
+        }
+
+        .news-meta {
+            color: #4caf50;
+            font-size: 14px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .news-excerpt {
+            color: #555;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="news-wrapper">
+        <h2 class="section-heading">Tin Tức</h2>
+        
+        <div class="news-card">
+            <a href="#">
+                <img class="news-image" src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?q=80&w=600&auto=format&fit=crop" alt="Chế phẩm hóa học" title="Chế phẩm hóa học là gì? Và những điều cần lưu ý khi sử dụng">
+            </a>
+            
+            <a href="#" class="news-title">Chế phẩm hóa học là gì? Và những điều cần lưu ý khi sử dụng</a>
+            
+            <div class="news-meta">
+                <i class="fa-regular fa-clock"></i> 06/06/2026
+            </div>
+            
+            <p class="news-excerpt">
+                NaOH hay còn được gọi dưới cái tên Sodium hydroxide, tên gọi trong hóa học là Natri Hydroxit. Các dạng cấu trúc: xút vảy, xút hạt, xút lỏng....
+            </p>
+        </div>
+    </div>
+
+</body>
+</html>

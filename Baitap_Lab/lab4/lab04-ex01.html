@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab04-ex1</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 50px;
+        }
+        .product-box {
+            width: 350px;
+            padding: 2rem; 
+            border: 2px solid #ff9800;
+            border-radius: 15px;
+            background-color: #fff;
+            position: relative; 
+            text-align: center; 
+            cursor: pointer;
+            transition: 0.3s ease; 
+        }
+        .badge {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: #ff9800;
+            color: white;
+            width: 35px;
+            height: 35px;
+            border-radius: 0 12px 0 15px; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 14px;
+            
+        }
+
+        .name {
+            font-size: 1.2rem; 
+            margin-bottom: 0.5rem;
+            line-height: 1.4;
+        }
+
+        .price {
+            font-size: 1.5rem;
+            font-weight: bold; 
+            color: #000;
+        }
+
+        .product-box:hover .badge i{
+            transform: rotate(5deg) scale(1.8); 
+            transition: transform 0.3s ease; 
+        }
+
+        .badge i {
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="product-box">
+        <div class="badge">
+            <i class="fas fa-check"></i>
+        </div>
+        
+        <div class="content">
+            <p class="name">Macbook Air M4 | core <br> GPU + 512GB</p>
+            <p class="price">28.790.000 VNĐ</p>
+        </div>
+    </div>
+
+</body>
+</html>
