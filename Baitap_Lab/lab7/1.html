@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM element : truy xuất tới thẻ HTML thông qua các thuộc tính như class, id, name, ... của thẻ HTML</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        #ketQua {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        h2 {
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>DOM element : truy xuất tới thẻ HTML thông qua các thuộc tính </h1>
+    <hr>
+
+    <div>
+        <p id="p1">getElementById('p1') - Nội dung của thẻ p</p>
+        <p class="p-class">getElementsByClassName('p-class')[0] - Nội dung của thẻ p</p>
+    </div>
+
+    <div id="zone2">
+        <h2>getElementsByTagName('h2')[0] - Nội dung tiêu đề h2</h2>
+        <p>querySelectorAll('div#zone2 > p')[0]</p>
+        <input type="text" id="myInput" value="Devmaster Academy!" size="50">
+    </div>
+
+    <hr>
+
+    <div id="ketQua">
+        <h2>Kết quả hiển thị:</h2>
+        <h3 id="h31"></h3>
+        <h3 class="h-32"></h3>
+        <h3>
+            <p></p>
+        </h3>
+        <h3 id="h33"></h3>
+    </div>
+
+    <script>
+        var nd_p1 = document.getElementById("p1").innerHTML;
+        console.log("Nội dung p1: ", nd_p1);
+
+        var nd_pclass = document.getElementsByClassName('p-class')[0].innerText;
+        var nd_tagName = document.getElementsByTagName("h2")[0].innerHTML;
+
+        var nd_selector = document.querySelectorAll("#zone2 > p")[0].innerText;
+        console.log("Nội dung selector: ", nd_selector);
+
+        var nd_val = document.querySelector("#zone2 > input").value;
+
+
+        document.getElementById("h31").innerHTML = "Dữ liệu từ ID p1: " + nd_p1;
+        document.getElementsByClassName("h-32")[0].innerText = "Dữ liệu từ Class: " + nd_pclass;
+        document.querySelector("#ketQua > h3 > p").innerHTML = "<span style='color:red'>" + nd_selector + "</span>";
+        document.getElementById("h33").innerHTML = "Giá trị từ Input: " + nd_val;
+    </script>
+
+</body>
+
+</html>
