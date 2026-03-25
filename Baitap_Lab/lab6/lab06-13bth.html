@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>chuoi trong js</h1>
+    <script>
+        var text = "Hello, World!";
+        document.write("<p>Chuỗi: " + text + "</p>");
+        document.write("<p>Độ dài chuỗi: " + text.length + "</p>");
+        document.write("<p>chuỗi viết hoa: " + text.toUpperCase() + "</p>"); 
+        document.write("<p>chuỗi viết thường: " + text.toLowerCase() + "</p>"); 
+        document.write("<p>cắt chuỗi 0-7': " + text.substring(0, 7) + "</p>");
+        document.write("<p>Vị trí của 'World': " + text.indexOf("   World") + "</p>");
+        document.write("<p>Chuỗi sau khi thay thế: " + text.replace("World", "JavaScript") + "</p>");
+        //tach chuoi
+        var words = text.split(" ");
+        for (var i = 0; i < words.length; i++) {
+            document.write("<p>Từ " + (i + 1) + ": " + words[i] + "</p>");
+        }
+    </script>
+</body>
+</html>

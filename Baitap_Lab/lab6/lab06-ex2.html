@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab06 - Ex2</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            border: 2px solid #5cb85c;
+            border-radius: 15px;
+            padding: 30px;
+            width: 380px;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 25px;
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #5cb85c;
+            border-radius: 25px;
+            box-sizing: border-box;
+            outline: none;
+            font-size: 14px;
+        }
+
+        .button-group {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+        }
+
+        button {
+            width: 50px;
+            height: 40px;
+            background-color: #5cb85c;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        button:hover {
+            cursor: pointer;
+            background-color: #45a049;
+            color: yellow;
+        }
+
+        #result {
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Thực hiện các phép tính toán</h2>
+        
+        <div class="input-group">
+            <input type="number" id="a" placeholder="Nhập số a:">
+        </div>
+        <div class="input-group">
+            <input type="number" id="b" placeholder="Nhập số b:">
+        </div>
+
+        <div class="button-group">
+            <button onclick="calc('+')">+</button>
+            <button onclick="calc('-')">-</button>
+            <button onclick="calc('*')">*</button>
+            <button onclick="calc('/')">/</button>
+            <button onclick="calc('%')">%</button>
+        </div>
+
+        <div class="input-group">
+            <input type="text" id="result" placeholder="Kết quả:" readonly>
+        </div>
+    </div>
+
+    <script>
+        function calc(operator) {
+            var a = parseFloat(document.getElementById("a").value);
+            var b = parseFloat(document.getElementById("b").value);
+            var res = 0;
+
+            if (isNaN(a) || isNaN(b)) {
+                alert("Vui lòng nhập a và b");
+                return;
+            }
+
+            if (operator === '+') res = a + b;
+            else if (operator === '-') res = a - b;
+            else if (operator === '*') res = a * b;
+            else if (operator === '/') {
+                if (b === 0) {
+                    alert("Không thể chia cho 0");
+                    return;
+                }
+                res = a / b;
+            }
+            else if (operator === '%') res = a % b;
+
+            document.getElementById("result").value = res;
+        }
+    </script>
+
+</body>
+</html>

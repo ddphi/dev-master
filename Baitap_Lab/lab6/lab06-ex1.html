@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab06 - Ex1</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            border: 2px solid #5cb85c;
+            border-radius: 15px;
+            padding: 30px 40px;
+            width: 350px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            font-family: "Times New Roman", Times, serif;
+            font-size: 28px;
+            margin-bottom: 25px;
+            color: #000;
+        }
+
+        .input {
+            margin-bottom: 15px;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #5cb85c;
+            border-radius: 25px;
+            box-sizing: border-box;
+            outline: none;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .remember {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            margin-bottom: 20px;
+            font-size: 14px;
+            color: #333;
+        }
+
+        .remember input {
+            margin-right: 8px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Login information</h2>
+        <form id="loginForm">
+            <div class="input">
+                <input type="text" id="username" placeholder="Username">
+            </div>
+            <div class="input">
+                <input type="password" id="password" placeholder="Password">
+            </div>
+            <div class="remember">
+                <input type="checkbox" id="remember">
+                <label for="remember">Remember me</label>
+            </div>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("loginForm").onsubmit = function () {
+            var user = document.getElementById("username").value;
+            var pass = document.getElementById("password").value;
+
+            if (user !== "" && pass !== "") {
+                alert("Welcome to world of JavaScript");
+            } else {
+                alert("Invalid Username or password");
+            }
+
+            return false; // Prevent form submission
+        };
+    </script>
+
+</body>
+
+</html>

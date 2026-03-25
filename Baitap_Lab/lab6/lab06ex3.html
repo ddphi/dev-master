@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab06 - Ex3</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            border: 2px solid #5cb85c;
+            border-radius: 15px;
+            padding: 30px;
+            width: 350px;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 28px;
+            margin-bottom: 25px;
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #5cb85c;
+            border-radius: 25px;
+            box-sizing: border-box;
+            outline: none;
+            font-size: 14px;
+        }
+
+        button {
+            padding: 12px 30px;
+            background-color: #5cb85c;
+            color: yellow;
+            border: none;
+            border-radius: 25px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-bottom: 15px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Tính số ngày</h2>
+        
+        <div class="input-group">
+            <input type="number" id="month" placeholder="Nhập tháng:">
+        </div>
+        <div class="input-group">
+            <input type="number" id="year" placeholder="Nhập năm:">
+        </div>
+
+        <button onclick="calculateDays()">Tính số ngày</button>
+
+        <div class="input-group">
+            <input type="text" id="result" placeholder="Kết quả:" readonly>
+        </div>
+    </div>
+
+    <script>
+        function calculateDays() {
+            var m = parseInt(document.getElementById("month").value);
+            var y = parseInt(document.getElementById("year").value);
+
+            if (isNaN(m) || isNaN(y) || m < 1 || m > 12 || y < 1) {
+                document.getElementById("result").value = "Vui lòng nhập tháng (1-12) và năm hợp lệ";
+                return;
+            }
+
+            var days = new Date(y, m, 0).getDate();
+            document.getElementById("result").value = days;
+        }
+    </script>
+
+</body>
+</html>

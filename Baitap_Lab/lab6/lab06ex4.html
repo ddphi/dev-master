@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab06 - Ex4</title>
+</head>
+<body>
+    <script>
+        let pattern = "<table border='1' cellspacing='0' cellpadding='20' style='font-family: monospace; font-size: 16px; margin: 0 auto;'><tr>";
+
+        pattern += "<td style='text-align: left; vertical-align: top;'>";
+        for (let i = 0; i <= 9; i++) {
+            for (let j = 0; j <= i; j++) pattern += j;
+            pattern += "<br>";
+        }
+        pattern += "</td>";
+
+        pattern += "<td style='text-align: right; vertical-align: top;'>";
+        for (let i = 9; i >= 0; i--) {
+            for (let j = 0; j <= i; j++) pattern += j;
+            pattern += "<br>";
+        }
+        pattern += "</td>";
+
+        pattern += "<td style='text-align: right; vertical-align: top;'>";
+        for (let i = 0; i <= 9; i++) {
+            for (let j = 0; j <= i; j++) pattern += j;
+            pattern += "<br>";
+        }
+        pattern += "</td>";
+
+        pattern += "<td style='text-align: left; vertical-align: top;'>";
+        for (let i = 9; i >= 0; i--) {
+            for (let j = 0; j <= i; j++) pattern += j;
+            pattern += "<br>";
+        }
+        pattern += "</td>";
+
+        pattern += "</tr>";
+        pattern += "<tr><td style='text-align: center;'>Hình 1</td><td style='text-align: center;'>Hình 2</td><td style='text-align: center;'>Hình 3</td><td style='text-align: center;'>Hình 4</td></tr>";
+        pattern += "</table>";
+
+        document.write(pattern);
+    </script>
+</body>
+</html>
